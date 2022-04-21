@@ -1,0 +1,124 @@
+12:52:20,236 DEBUG SQL:103 - 
+    insert 
+    into
+        Guide
+        (name, salary, staff_id) 
+    values
+        (?, ?, ?)
+12:52:20,246 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [Max Wilson]
+12:52:20,247 TRACE BasicBinder:65 - binding parameter [2] as [INTEGER] - [10000]
+12:52:20,247 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [ABCDEF12345]
+12:52:20,254 DEBUG SQL:103 - 
+    insert 
+    into
+        Student
+        (enrollment_id, guide_id, student_name) 
+    values
+        (?, ?, ?)
+12:52:20,255 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [2022ABC123]
+12:52:20,255 TRACE BasicBinder:65 - binding parameter [2] as [BIGINT] - [3]
+12:52:20,256 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [John Smith]
+12:52:20,257 DEBUG SQL:103 - 
+    insert 
+    into
+        Student
+        (enrollment_id, guide_id, student_name) 
+    values
+        (?, ?, ?)
+12:52:20,258 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [2022ABC987]
+12:52:20,258 TRACE BasicBinder:65 - binding parameter [2] as [BIGINT] - [3]
+12:52:20,258 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [Percy Williams]
+12:52:20,259 DEBUG SQL:103 - 
+    insert 
+    into
+        Guide
+        (name, salary, staff_id) 
+    values
+        (?, ?, ?)
+12:52:20,260 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [Terence Junior]
+12:52:20,260 TRACE BasicBinder:65 - binding parameter [2] as [INTEGER] - [2000]
+12:52:20,260 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [JDSFII67339]
+12:52:20,263 DEBUG SQL:103 - 
+    insert 
+    into
+        Student
+        (enrollment_id, guide_id, student_name) 
+    values
+        (?, ?, ?)
+12:52:20,263 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [2021XYZ567]
+12:52:20,264 TRACE BasicBinder:65 - binding parameter [2] as [BIGINT] - [4]
+12:52:20,264 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [Julie Mary]
+12:53:11,993 DEBUG SQL:103 - 
+    
+    create table Guide (
+       id bigint not null auto_increment,
+        name varchar(255),
+        salary integer,
+        staff_id varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+12:53:12,014 DEBUG SQL:103 - 
+    
+    create table Student (
+       id bigint not null auto_increment,
+        enrollment_id varchar(255) not null,
+        student_name varchar(255) not null,
+        guide_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+12:53:12,030 DEBUG SQL:103 - 
+    
+    alter table Student 
+       add constraint FKb4ny3l3cnsxbbn601ev8mhlj5 
+       foreign key (guide_id) 
+       references Guide (id)
+12:53:12,138 DEBUG SQL:103 - 
+    insert 
+    into
+        Guide
+        (name, salary, staff_id) 
+    values
+        (?, ?, ?)
+12:53:12,140 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [Max Wilson]
+12:53:12,141 TRACE BasicBinder:65 - binding parameter [2] as [INTEGER] - [10000]
+12:53:12,141 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [ABCDEF12345]
+12:53:12,148 DEBUG SQL:103 - 
+    insert 
+    into
+        Student
+        (enrollment_id, guide_id, student_name) 
+    values
+        (?, ?, ?)
+12:53:12,148 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [2022ABC123]
+12:53:12,148 TRACE BasicBinder:65 - binding parameter [2] as [BIGINT] - [1]
+12:53:12,148 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [John Smith]
+12:53:12,150 DEBUG SQL:103 - 
+    insert 
+    into
+        Student
+        (enrollment_id, guide_id, student_name) 
+    values
+        (?, ?, ?)
+12:53:12,150 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [2022ABC987]
+12:53:12,151 TRACE BasicBinder:65 - binding parameter [2] as [BIGINT] - [1]
+12:53:12,151 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [Percy Williams]
+12:53:12,152 DEBUG SQL:103 - 
+    insert 
+    into
+        Guide
+        (name, salary, staff_id) 
+    values
+        (?, ?, ?)
+12:53:12,153 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [Terence Junior]
+12:53:12,155 TRACE BasicBinder:65 - binding parameter [2] as [INTEGER] - [2000]
+12:53:12,155 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [JDSFII67339]
+12:53:12,155 DEBUG SQL:103 - 
+    insert 
+    into
+        Student
+        (enrollment_id, guide_id, student_name) 
+    values
+        (?, ?, ?)
+12:53:12,156 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [2021XYZ567]
+12:53:12,156 TRACE BasicBinder:65 - binding parameter [2] as [BIGINT] - [2]
+12:53:12,156 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [Julie Mary]

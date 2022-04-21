@@ -18,8 +18,11 @@
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
          
-        <!-- Use XML-based mapping metadata -->	
-        <mapping resource="domain/Message.hbm.xml"/>       
+        <!-- Use XML-based mapping metadata 	
+        <mapping resource="domain/Message.hbm.xml"/>     -->  
+        
+         <!--  Use annotation based mapping -->   
+        <mapping class="domain.Message" />
         
     </session-factory>
 </hibernate-configuration>
